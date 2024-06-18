@@ -1,23 +1,30 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import NewAdhaarFormReg from './Components/NewAdhaarFormReg';
+import RegisteredUserDetails from './Components/RegisteredUserDetails';
 import './App.css';
 
 function App() {
+  const [currentTab, setCurrentTab] = useState('newRegister');
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+      <div className="tab-container">
+        <button 
+          className={`tab ${currentTab === 'newRegister' ? 'active' : ''}`} 
+          onClick={() => setCurrentTab('newRegister')}
         >
-          Learn React
-        </a>
-      </header>
+          New Register
+        </button>
+        <button 
+          className={`tab ${currentTab === 'registeredUser' ? 'active' : ''}`} 
+          onClick={() => setCurrentTab('registeredUser')}
+        >
+          Registered User
+        </button>
+      </div>
+      <div className="tab-content">
+        {currentTab === 'newRegister' && <NewAdhaarFormReg />}
+        {currentTab === 'registeredUser' && <RegisteredUserDetails/>}
+      </div>
     </div>
   );
 }

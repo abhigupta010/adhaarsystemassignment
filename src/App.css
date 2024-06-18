@@ -1,38 +1,195 @@
-.App {
+* {
+  box-sizing: border-box;
+}
+
+.app {
+  font-family: Arial, sans-serif;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.form-container {
+  border: 1px solid #000;
+  padding: 20px;
+  border-radius: 5px; 
+  max-width: 500px; 
+  margin: 0 auto; 
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+form {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.input-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.input-field {
+  position: relative;
+}
+
+input {
+  margin: 10px 0;
+  padding: 10px;
+  font-size: 16px;
+  width: 100%;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+  position: absolute;
+  bottom: -8px;
+  left: 10px;
+}
+
+.regButton {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 10px;
+  background-color: #4CAF50;
   color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+button:hover {
+  background-color: #45a049;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.outer {
+  position: relative;
+  background: url('https://image.slidesharecdn.com/aadharcard-misppt-130331053310-phpapp01/85/Aadhar-card-ppt-5-320.jpg') center/cover no-repeat; 
+  background-repeat: no-repeat;
+  background-position: top;
+  height: 220px;
+  width: 450px;
+  border: 1px solid rgb(158, 156, 156);
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+  padding: 25px 25px; 
+  color: #fff;
+}
+
+img {
+  position: absolute;
+  top: 2px;
+  height: 100%;
+  width: 15%;
+  right: 6px;
+  z-index: 0;
+  animation-delay: 0.5s;
+}
+
+h1 {
+  color: #111;
+  font-size: 20px;
+}
+
+p {
+  width: 280px;
+  font-size: 13px;
+  line-height: 0.2;
+  color: #aaa;
+  margin: 14px 0;
+}
+
+.bg {
+  display: inline-block;
+  color: #fff;
+  background: #d9d637d9;
+  padding: 5px 10px;
+  border-radius: 50px;
+  font-size: .7em;
+}
+
+.button {
+  justify-content: center;
+  align-items: center; 
+  height: fit-content;
+  margin-top: 0px;
+}
+
+.uid {
+  margin-bottom: 0; 
+  text-align: center; 
+  font-size: 22px;
+  color:#535353
+}
+
+.container {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+.App {
+  font-family: Arial, sans-serif;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.tab-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.tab {
+  padding: 10px 20px;
+  margin: 0 5px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+}
+
+.tab.active {
+  background-color: #4CAF50;
+  color: white;
+  border-color: #4CAF50;
+}
+
+.tab-content {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #fff;
+}
+.user-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; /* Adjust as needed */
+  gap: 20px;
+}
+
+.outer {
+  display: flex;
+  flex-direction: column;
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 450px;
+}
+
+.content {
+  flex: 1;
+}
+
+.qrcode {
+  max-width: 100%;
+  height: auto;
+  margin-top: 20px;
 }
